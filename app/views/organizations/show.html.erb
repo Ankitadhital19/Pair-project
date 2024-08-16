@@ -1,0 +1,7 @@
+<%= form_with url: "/invitations" do |form| %>
+<%= form.label :email %>
+<%= form.text_field :email %>
+<%= form.hidden_field :organization_id, value: @organization.id %>
+<%= form.submit %>
+
+<% end %>

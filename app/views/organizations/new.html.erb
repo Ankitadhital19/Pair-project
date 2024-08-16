@@ -1,0 +1,9 @@
+<%= form_with model: @organization, url: organizations_path do |form| %>
+<%= form.label :name %>
+<%= form.text_field :name %>
+<%= form.fields_for :users do |user_form| %>
+<%= user_form.label :email %>
+<%= user_form.text_field :email %>
+<% end %>
+<%= form.submit %>
+<% end %>
